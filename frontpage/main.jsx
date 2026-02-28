@@ -19,11 +19,12 @@ export function action(item){
     )
 }
 
+
+
 //function to render 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
 root.render(
-<action product="pug" cost="500" />
+    <action product="pug" cost="500"></action>
 );
 
 
