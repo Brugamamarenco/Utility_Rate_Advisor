@@ -1,11 +1,11 @@
-#Calculate Impact 
+#Calculate The Impact Of Each Purchase On The Credit Limit
 def calculateImpact(productCost,creditMax): 
     ultilityRatio=(productCost/creditMax)
     convertToPercentage=ultilityRatio * 100 
 
-    return convertToPercentage
+    return round(convertToPercentage,2)
 
-#Sum 
+#Sum The Percentages To Get Total Impact Of All Purchases On The Credit Limit
 def sumPercentages(percentageList): 
     return sum(percentageList)
 
@@ -25,7 +25,19 @@ def purchaseToRate(dataset):
         percentageList.append(percentageImpact)
 
         #debugging statement 
-        print("Hello World: "+str(round(sum(percentageList))))
-        percentageAccumlation.append(round(sum(percentageList),2))
-    
+
+
     return percentageList
+
+#Print Results 
+def printResults(dataset):
+    for index,row in dataset.iterrows(): 
+        print(row["product"]+": $"+str(row["cost"])+"=>"+str(calculateImpact(row["cost"],row["creditMax"]))+"%")
+
+#Return The Dateset 
+def returnDatesAndCost(dataset): 
+    dates=dataset["date"]
+    costs=dataset["cost"]
+
+    return dates,costs
+
