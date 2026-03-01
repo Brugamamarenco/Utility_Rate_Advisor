@@ -16,8 +16,7 @@ import helperFunctions as hf
 #Open The Dataset
 def runDataSet(): 
     data=pd.read_csv("../mockdata/data.csv")
-    print(data)
-
+  
     return data
 
 
@@ -33,9 +32,6 @@ def rateHistory(dataset):
 
 #Testing Results 
 percentageList=hf.purchaseToRate(runDataSet()) 
-print(str(hf.sumPercentages(percentageList))+"%")
-
-print("Percentage List" + str(len((percentageList))))
 
 
 

@@ -18,7 +18,6 @@ def purchaseToRate(dataset):
     maxCreditInformation=dataset["creditMax"][0]
 
     for cost in costInformation: 
-        print("Cost: " + str(cost))
         percentageImpact=round(calculateImpact(cost,maxCreditInformation),2)
         
 
