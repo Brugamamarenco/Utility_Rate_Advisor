@@ -1,6 +1,5 @@
-product,cost 
-potato,1.23 
-blanket,40.56
-plushie,70.21
-
-
+product,cost,date,creditMax,impact
+item1,4.32,none,1500
+item2,6.34,none
+item3,8.73,none
+item4,500.32,none;

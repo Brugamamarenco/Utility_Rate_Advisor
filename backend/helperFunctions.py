@@ -1,6 +1,6 @@
 #Calculate Impact 
 def calculateImpact(productCost,creditMax): 
-    ultilityRatio=productCost / creditMax
+    ultilityRatio=(productCost/creditMax)
     convertToPercentage=ultilityRatio * 100 
 
     return convertToPercentage
@@ -12,24 +12,20 @@ def sumPercentages(percentageList):
 #Convert Purchase To Perce tage Impact 
 def purchaseToRate(dataset): 
     percentageList=[] 
+    percentageAccumlation=[]
 
     costInformation=dataset["cost"]
     maxCreditInformation=dataset["creditMax"][0]
 
     for cost in costInformation: 
+        print("Cost: " + str(cost))
         percentageImpact=round(calculateImpact(cost,maxCreditInformation),2)
+        
+
         percentageList.append(percentageImpact)
 
         #debugging statement 
-        print(str(percentageImpact)+"%")
+        print("Hello World: "+str(round(sum(percentageList))))
+        percentageAccumlation.append(round(sum(percentageList),2))
     
-    return percentageList 
-
-#Data Modeling
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-def makeDiagram(df): 
-    sns.lineplot(data=df,x="dates", y="rates")
-    plt.show()
-
+    return percentageList

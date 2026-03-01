@@ -12,13 +12,7 @@ import flask
 dataset=pd.read_csv("../mockdata/data.csv")
 print(dataset)
 
-percentageList=hf.purchaseToRate(dataset)
+percentageList=(hf.purchaseToRate(dataset))
 print(str(hf.sumPercentages(percentageList))+"%")
 
-
-df=pd.DataFrame({"dates":[1,2,3],"rates":percentageList})
-
-hf.makeDiagram(df)
-
-
-
+print("Percentage List" + str(len((percentageList))))

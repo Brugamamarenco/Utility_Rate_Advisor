@@ -1,0 +1,20 @@
+
+#a table{
+    width:80%;
+}
+
+table th {
+    height:80px;
+    border:1px solid black;
+}
+th p {
+    text-align:right;
+    padding:10px;
+    padding-bottom:35px;
+}
+body {
+    font-family: Arial;
+}
+th #purchase{
+    border:1px solid black;
+}
