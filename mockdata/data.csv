@@ -1,5 +1,5 @@
-product,cost,date,creditMax,impact
-item1,4.32,none,1500
-item2,6.34,none
-item3,8.73,none
-item4,500.32,none;
+id,product,cost,date,creditMax,impact
+1,item1,4.32,none,1500
+2,item2,6.34,none,1500
+3,item3,8.73,none,1500
+4,item4,500.32,none,1500
